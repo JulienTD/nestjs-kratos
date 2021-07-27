@@ -1,0 +1,16 @@
+<div class="content">
+    {{> header}}
+    <div class="container">
+        <h4>Verify your email address</h4>
+
+        {{> messages messages=messages className="global"}}
+
+        {{#if (eq state "passed_challenge")}}
+            <p>Verification successful!</p>
+        {{/if}}
+
+        <div id="ui">
+          {{> ui submitLabel="Resend verification link" ui=ui}}
+        </div>
+    </div>
+</div>
